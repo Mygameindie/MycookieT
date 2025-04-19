@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <button id="jumpButton" ontouchstart="jump()">
+        <img src="jump.png" alt="Jump" style="width: 50px;">
+    </button>
+    <button id="slideButton" ontouchstart="startSlide(event)" ontouchend="endSlide(event)">
+        <img src="slide.png" alt="Slide" style="width: 50px;">
+    </button>
+    <button id="resetButton" onclick="reset()">
+        <img src="reset.png" alt="Reset" style="width: 50px;">
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>
