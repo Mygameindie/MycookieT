@@ -1,33 +1,67 @@
+/* General Reset */
 body {
     margin: 0;
+    padding: 0;
     overflow: hidden;
-    position: relative;
+    width: 100vw;
+    height: auto;
+    background: white; /* Optional: black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Make canvas fill entire screen */
 canvas {
     display: block;
+    width: 100vw;
+    height: auto;
 }
 
+/* Control buttons */
 button {
     position: absolute;
     padding: 0;
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
+}
+
+#jumpButton img,
+#slideButton img,
+#resetButton img {
+    width: 8vw;
+    max-width: 60px;
 }
 
 #jumpButton {
-    bottom: 20px;
-    left: 20px;
+    bottom: 5vh;
+    left: 5vw;
 }
 
 #slideButton {
-    bottom: 20px;
-    right: 20px;
+    bottom: 5vh;
+    right: 5vw;
 }
 
 #resetButton {
-    top: 20px;
-    right: 20px;
+    top: 5vh;
+    right: 5vw;
+}
+
+/* Mobile scaling */
+@media (max-width: 600px) {
+    #jumpButton img,
+    #slideButton img,
+    #resetButton img {
+        width: 12vw;
+        max-width: 50px;
+    }
+
+    #jumpButton,
+    #slideButton,
+    #resetButton {
+        z-index: 2;
+    }
 }
